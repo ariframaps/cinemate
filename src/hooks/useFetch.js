@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const useFetch = (apiPath) => {
+export const useFetch = (apiPath, queryTerms = '') => {
     const options = {
         method: 'GET',
         headers: {
@@ -9,14 +9,17 @@ export const useFetch = (apiPath) => {
         }
     };
     const [data, setData] = useState([])
-    const api = 'https://api.themoviedb.org/3/movie/';
+    const api = 'https://api.themoviedb.org/3/';
 
-    console.log(`${api}${apiPath}?language=en-US&page=1`)
+    console.log(`${api}${apiPath}?query=${queryTerms}&include_adult=true&language=en-US&page=1`)
 
     useEffect(() => {
-        fetch(`${api}${apiPath}?language=en-US&page=1`, options)
+        fetch(`${api}${apiPath}?query=${queryTerms}&include_adult=true&language=en-US&page=1`, options)
             .then(response => response.json())
-            .then(response => setData(response.results))
+            .then(response => {
+                setData(response.results)
+                console.log(data)
+            })
             .catch(err => console.error(err));
     }, [apiPath])
 
