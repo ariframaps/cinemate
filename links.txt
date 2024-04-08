@@ -1,0 +1,22 @@
+9fe93ef93ba70a6e8a09aa144bb443de
+
+    const options = {
+        method: 'GET',
+        headers: {
+            accept: 'application/json',
+            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5ZmU5M2VmOTNiYTcwYTZlOGEwOWFhMTQ0YmI0NDNkZSIsInN1YiI6IjY2MTMyNGUzZTEwZjQ2MDFhNDM4YWMwZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.E1WaehfvvpAkHtRU8OVJY9DSoRmTkilpPuE200D6Vak'
+        }
+    };
+
+popular
+    useEffect(() => {
+        fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', options)
+            .then(response => response.json())
+            .then(response => setMovies(response.results))
+            .catch(err => console.error(err));
+    }, [])
+
+images
+    https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg
+    https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.png
+    https://image.tmdb.org/t/p/w500/wwemzKWzjKYJFfCeiB57q3r4Bcm.png
