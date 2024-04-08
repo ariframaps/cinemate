@@ -3,7 +3,7 @@ import { useFetch } from "../hooks/useFetch";
 
 export const MovieList = ({ apiPath }) => {
     const { data: movies } = useFetch(apiPath)
-    console.log(movies)
+    // console.log(movies)
 
     return (
         <main>

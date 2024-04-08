@@ -11,16 +11,17 @@ export const useFetch = (apiPath, queryTerms = '') => {
     const [data, setData] = useState([])
     const api = 'https://api.themoviedb.org/3/';
 
-    console.log(`${api}${apiPath}?query=${queryTerms}&include_adult=true&language=en-US&page=1`)
-
     useEffect(() => {
-        fetch(`${api}${apiPath}?query=${queryTerms}&include_adult=true&language=en-US&page=1`, options)
-            .then(response => response.json())
-            .then(response => {
-                setData(response.results)
-                console.log(data)
-            })
-            .catch(err => console.error(err));
+        const fetchData = async () => {
+            try {
+                const response = await fetch(`${api}${apiPath}${queryTerms ? `?query=${queryTerms}` : ''}`, options);
+                const result = await response.json();
+                setData(result.results);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+        fetchData()
     }, [apiPath, queryTerms])
 
     return { data }
