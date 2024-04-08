@@ -21,7 +21,7 @@ export const useFetch = (apiPath, queryTerms = '') => {
                 console.log(data)
             })
             .catch(err => console.error(err));
-    }, [apiPath])
+    }, [apiPath, queryTerms])
 
     return { data }
 }
