@@ -43,7 +43,7 @@ export const MovieDetail = () => {
                         <p className='my-7'>{movDetail.overview}</p>
                         <span className='flex gap-5'>
                             {movDetail.genres ? movDetail.genres.map((genre) => (
-                                <p className='border px-4 py-2 box-border border-slate-400 rounded'>{genre.name}</p>
+                                <p key={genre.name} className='border px-4 py-2 box-border border-slate-400 rounded'>{genre.name}</p>
                             )) : ''}
                         </span>
                         <div className='flex flex-col gap-3 mt-5'>
