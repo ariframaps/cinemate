@@ -1,0 +1,44 @@
+{
+  "title": "Cinemate",
+  "category": "personal",
+  "description": "A movie discovery web application built with React that allows users to explore popular, upcoming, and top-rated movies through a clean and responsive interface. The platform focuses on providing an enjoyable browsing experience for discovering new films and viewing detailed movie information.",
+  "shortDesc": "Movie discovery platform for exploring popular and trending films.",
+  "tags": [
+    "react",
+    "react-router-dom",
+    "tailwindcss",
+    "javascript",
+    "movie-api"
+  ],
+  "role": "Frontend Developer",
+  "year": "2024",
+  "confidentialNote": null,
+  "details": {
+    "overview": "Cinemate is a personal frontend project created to practice building dynamic and responsive user interfaces using React. The application helps users discover movies by browsing popular titles, upcoming releases, and top-rated films in a modern web experience.",
+    "problem": "Many movie websites feel cluttered and overwhelming when users simply want to browse and discover films quickly. I wanted to build a cleaner and more lightweight movie browsing experience focused on usability and responsive design.",
+    "solution": "I built the platform using React and React Router DOM to create a smooth single-page application experience. TailwindCSS was used for responsive styling and reusable UI layouts. The application integrates movie API data to display movie details, ratings, and categorized movie collections such as trending, upcoming, and top-rated films.",
+    "timeline": [
+      {
+        "date": "Apr 2024",
+        "label": "Project setup & UI planning"
+      },
+      {
+        "date": "Apr 2024",
+        "label": "Movie browsing & routing implementation"
+      },
+      {
+        "date": "May 2024",
+        "label": "Responsive optimization & polishing"
+      }
+    ],
+    "highlights": [
+      "Popular, upcoming, and top-rated movie browsing",
+      "Responsive UI for desktop and mobile devices",
+      "Dynamic routing using React Router DOM",
+      "Movie detail pages with external API integration",
+      "Modern UI built with TailwindCSS",
+      "Single-page application architecture"
+    ],
+    "outcome": "The project strengthened my frontend development skills in React ecosystem fundamentals, especially routing, API integration, responsive design, and reusable component architecture."
+  }
+}
